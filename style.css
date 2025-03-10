@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(9, 50px);
+    grid-template-rows: repeat(9, 50px);
+    gap: 2px;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ff0000;
+}
+
+.barrier {
+    background-color: #000; /* Couleur des barrières */
+    position: absolute; /* Permet de positionner les barrières par rapport à la cellule */
+}
+
+.barrier.horizontal {
+    width: 100px; /* Longueur de la barrière horizontale */
+    height: 10px; /* Épaisseur de la barrière */
+    top: 50%; /* Centrer verticalement */
+    left: 0;
+}
+
+.barrier.vertical {
+    width: 10px; /* Épaisseur de la barrière */
+    height: 100px; /* Longueur de la barrière verticale */
+    top: 0;
+    left: 50%; /* Centrer horizontalement */
+}
+#player-info {
+    margin-top: 20px;
+    text-align: center;
+}
